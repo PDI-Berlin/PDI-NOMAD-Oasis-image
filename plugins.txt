@@ -1,4 +1,4 @@
 git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@568c852239060d14ed807e892c2abc30e144fffd 
 git+https://github.com/FAIRmat-NFDI/nomad-measurements.git@e0ce0497bd22db8bd4ce94d3a2eddc8f8a0efa47
 git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@develop
-git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@main 
+git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@main
