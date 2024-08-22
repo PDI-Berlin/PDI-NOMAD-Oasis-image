@@ -24,23 +24,23 @@ elastic:
     entries_index: nomad_oasis_entries_v1
     materials_index: nomad_oasis_materials_v1
 
-plugins:
-  include:
-    - "nomad_material_processing:schema"
-    - "nomad_material_processing.solution:schema"
-    - "nomad_material_processing.vapor_deposition.cvd:schema"
-    - "nomad_material_processing.vapor_deposition.pvd:schema"
-    - "nomad_material_processing.vapor_deposition.pvd:mbe_schema"
-    - "nomad_material_processing.vapor_deposition.pvd:pld_schema"
-    - "nomad_material_processing.vapor_deposition.pvd:sputtering_schema"
-    - "nomad_material_processing.vapor_deposition.pvd:thermal_schema"
-    - "nomad_measurements.general:schema"
-    - "nomad_measurements.xrd:schema"
-    - "nomad_measurements.xrd:parser"
-    - "nomad_measurements.transmission:schema"
-    - "nomad_measurements.transmission:parser"
-    - 'pdi_nomad_plugin.general:general_schema'
-    - 'pdi_nomad_plugin.characterization:characterization_schema'
-    - 'pdi_nomad_plugin.mbe:mbe_schema'
-    - 'pdi_nomad_plugin.mbe.growth_excel:mbe_growth_excel_parser'
+# plugins:
+#   include:
+#     - "nomad_material_processing:schema"
+#     - "nomad_material_processing.solution:schema"
+#     - "nomad_material_processing.vapor_deposition.cvd:schema"
+#     - "nomad_material_processing.vapor_deposition.pvd:schema"
+#     - "nomad_material_processing.vapor_deposition.pvd:mbe_schema"
+#     - "nomad_material_processing.vapor_deposition.pvd:pld_schema"
+#     - "nomad_material_processing.vapor_deposition.pvd:sputtering_schema"
+#     - "nomad_material_processing.vapor_deposition.pvd:thermal_schema"
+#     - "nomad_measurements.general:schema"
+#     - "nomad_measurements.xrd:schema"
+#     - "nomad_measurements.xrd:parser"
+#     - "nomad_measurements.transmission:schema"
+#     - "nomad_measurements.transmission:parser"
+#     - 'pdi_nomad_plugin.general:general_schema'
+#     - 'pdi_nomad_plugin.characterization:characterization_schema'
+#     - 'pdi_nomad_plugin.mbe:mbe_schema'
+#     - 'pdi_nomad_plugin.mbe.growth_excel:mbe_growth_excel_parser'
 
