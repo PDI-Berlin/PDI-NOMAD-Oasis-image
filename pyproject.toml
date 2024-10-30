@@ -40,7 +40,7 @@ plugins = [
   "nomad-parser-plugins-workflow>=1.0",
   "nomad-parser-plugins-database>=1.0",
   "nomad-measurements",
-  "nomad-material-processing",
+  "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@ae63a20e702b2fa8df2b55b40d00a5226f8458aa",
   "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@develop",
   "statsmodels",
   "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@main",
