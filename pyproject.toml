@@ -44,7 +44,7 @@ plugins = [
   "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@ada8b1638f7aa88d40f65b5536439e644cc79fe1",
   "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@6fc9e58f559776357ab8e4b841dfa778d261dd49",
   "statsmodels",
-  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@4a520104fe9f0adac995104505f9b1a57da0ac6f",
+  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@6fbb61d78c578cd74c87de7584d3fb36ca3be30a",
 
 ]
 jupyter = []
