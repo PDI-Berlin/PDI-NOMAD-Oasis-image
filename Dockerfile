@@ -4,7 +4,7 @@
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/engine/reference/builder/
 
-ARG PYTHON_VERSION=3.12
+ARG PYTHON_VERSION=3.10
 
 FROM python:${PYTHON_VERSION}-slim AS base
 
