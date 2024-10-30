@@ -3692,6 +3692,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=main" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=b29cbbd808a6c9c0c45cdd10c6e7982375342d9f#b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
     { name = "statsmodels", marker = "extra == 'plugins'" },
