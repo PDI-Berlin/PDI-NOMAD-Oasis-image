@@ -43,7 +43,7 @@ plugins = [
   "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@ae63a20e702b2fa8df2b55b40d00a5226f8458aa",
   "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@develop",
   "statsmodels",
-  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@main",
+  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@a632e56d106ae6b858f44c374db1aef3b852ecbe",
 
 ]
 jupyter = []
