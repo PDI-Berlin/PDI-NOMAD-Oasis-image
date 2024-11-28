@@ -3704,6 +3704,7 @@ plugins = [
     { name = "epic-scraper" },
     { name = "nomad-aitoolkit" },
     { name = "nomad-analysis" },
+    { name = "nomad-ikz-raman" },
     { name = "nomad-material-processing" },
     { name = "nomad-measurements" },
     { name = "nomad-normalizer-plugin-bandstructure" },
@@ -3732,6 +3733,7 @@ requires-dist = [
     { name = "epic-scraper", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/EPIC_scraper?rev=6fc9e58f559776357ab8e4b841dfa778d261dd49#6fc9e58f559776357ab8e4b841dfa778d261dd49" },
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8#b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
     { name = "nomad-analysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=ada8b1638f7aa88d40f65b5536439e644cc79fe1#ada8b1638f7aa88d40f65b5536439e644cc79fe1" },
+    { name = "nomad-ikz-raman", marker = "extra == 'plugins'", git = "https://github.com/IKZ-Berlin/IKZ_raman.git?rev=797a36fa985412e00527d4298f763eb2318a3ec4#797a36fa985412e00527d4298f763eb2318a3ec4" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = "==1.3.11.dev43+g418466299" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = "==1.3.11.dev43+g418466299" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=ae63a20e702b2fa8df2b55b40d00a5226f8458aa#ae63a20e702b2fa8df2b55b40d00a5226f8458aa" },
@@ -3766,6 +3768,14 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/47/5d/5f6c2d7ef225a92f326103d30a6333a4bc71030f344981d15b6e31b0ec5a/nomad_dos_fingerprints-1.0.2.tar.gz", hash = "sha256:cc70624ee7f680d471e00fa31fccbc1c0bfec6410fa7f980dbaeaff2603249fe", size = 11386 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7f/5d/f0604fa8e642562118ad330088959623ba84cb56c965a23b34c8e2ce225a/nomad_dos_fingerprints-1.0.2-py3-none-any.whl", hash = "sha256:cc01ed88d35f751ef13c89e75faeea16fef16ab8363b3a6fcb4f810afacb6338", size = 10593 },
+]
+
+[[package]]
+name = "nomad-ikz-raman"
+version = "0.1.0"
+source = { git = "https://github.com/IKZ-Berlin/IKZ_raman.git?rev=797a36fa985412e00527d4298f763eb2318a3ec4#797a36fa985412e00527d4298f763eb2318a3ec4" }
+dependencies = [
+    { name = "nomad-lab" },
 ]
 
 [[package]]
