@@ -17,7 +17,7 @@ version = "0.1"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
-dependencies = ["nomad-lab[parsing, infrastructure]==1.3.11.dev43+g418466299"]
+dependencies = ["nomad-lab[parsing, infrastructure]==1.3.14.dev28+gc73e56eac"]
 
 [project.optional-dependencies]
 plugins = [
@@ -40,16 +40,16 @@ plugins = [
   "nomad-parser-plugins-workflow>=1.0",
   "nomad-parser-plugins-database>=1.0",
   "nomad-measurements",
-  "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@ae63a20e702b2fa8df2b55b40d00a5226f8458aa",
-  "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@ada8b1638f7aa88d40f65b5536439e644cc79fe1",
-  "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@6fc9e58f559776357ab8e4b841dfa778d261dd49",
+  "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@d8efe78e816e050caebd3fa7aa90528337db8bec",
+  "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@7f2fe10084953e2827389e2bcb42df6b106ab484",
+  "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@278b0a1a9a6a6fdd1d893cf65513194cda668a01",
   "statsmodels",
-  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@6fbb61d78c578cd74c87de7584d3fb36ca3be30a",
+  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@2eec8ccd35720cdb2a0d16d1c39ef791cd62bdbe",
   "nomad_ikz_raman @ git+https://github.com/IKZ-Berlin/IKZ_raman.git@797a36fa985412e00527d4298f763eb2318a3ec4",
 
 ]
 jupyter = []
-dev = ["nomad-lab[parsing, infrastructure, dev]==1.3.11.dev43+g418466299"] 
+dev = ["nomad-lab[parsing, infrastructure, dev]==1.3.14.dev28+gc73e56eac"] 
 
 [tool.uv]
 extra-index-url = [
