@@ -3770,8 +3770,8 @@ requires-dist = [
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8#b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
     { name = "nomad-analysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=7f2fe10084953e2827389e2bcb42df6b106ab484#7f2fe10084953e2827389e2bcb42df6b106ab484" },
     { name = "nomad-ikz-raman", marker = "extra == 'plugins'", git = "https://github.com/IKZ-Berlin/IKZ_raman.git?rev=797a36fa985412e00527d4298f763eb2318a3ec4#797a36fa985412e00527d4298f763eb2318a3ec4" },
-    { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = "==1.3.14.dev28+gc73e56eac" },
-    { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = "==1.3.14.dev28+gc73e56eac" },
+    { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = "==1.3.14.dev40+ge27ebd5c4" },
+    { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = "==1.3.14.dev40+ge27ebd5c4" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=d8efe78e816e050caebd3fa7aa90528337db8bec#d8efe78e816e050caebd3fa7aa90528337db8bec" },
     { name = "nomad-measurements", marker = "extra == 'plugins'" },
     { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = ">=1.0" },
@@ -3788,7 +3788,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
-    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=23ed8bf3a8564ad1eb2872c029f6ea1c71d93032#23ed8bf3a8564ad1eb2872c029f6ea1c71d93032" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=d68e1c408ec6c6ffdfdc6c7b5703f093e9cbac6b#d68e1c408ec6c6ffdfdc6c7b5703f093e9cbac6b" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=b29cbbd808a6c9c0c45cdd10c6e7982375342d9f#b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
     { name = "statsmodels", marker = "extra == 'plugins'" },
@@ -3816,7 +3816,7 @@ dependencies = [
 
 [[package]]
 name = "nomad-lab"
-version = "1.3.14.dev28+gc73e56eac"
+version = "1.3.14.dev40+ge27ebd5c4"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "aniso8601" },
@@ -3861,7 +3861,7 @@ dependencies = [
     { name = "wrapt" },
     { name = "xarray" },
 ]
-sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/deb0b550ec6596fcda099e6298b164ea107c08189f3cc0383eeddef7625eb332/nomad-lab-1.3.14.dev28+gc73e56eac.tar.gz", hash = "sha256:deb0b550ec6596fcda099e6298b164ea107c08189f3cc0383eeddef7625eb332" }
+sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/d091f9688b3c4fb9e3666e541f44cfdb482a6780ae5d63f3f9a99a4a5d8a8227/nomad-lab-1.3.14.dev40+ge27ebd5c4.tar.gz", hash = "sha256:d091f9688b3c4fb9e3666e541f44cfdb482a6780ae5d63f3f9a99a4a5d8a8227" }
 
 [package.optional-dependencies]
 dev = [
@@ -4705,7 +4705,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=23ed8bf3a8564ad1eb2872c029f6ea1c71d93032#23ed8bf3a8564ad1eb2872c029f6ea1c71d93032" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=d68e1c408ec6c6ffdfdc6c7b5703f093e9cbac6b#d68e1c408ec6c6ffdfdc6c7b5703f093e9cbac6b" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-analysis" },
