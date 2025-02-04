@@ -1266,8 +1266,8 @@ wheels = [
 
 [[package]]
 name = "epic-scraper"
-version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/EPIC_scraper?rev=278b0a1a9a6a6fdd1d893cf65513194cda668a01#278b0a1a9a6a6fdd1d893cf65513194cda668a01" }
+version = "0.1.dev31+gdebd183"
+source = { git = "https://github.com/PDI-Berlin/EPIC_scraper?rev=debd18363ed900eb16843e6c7614f81d49cb32f6#debd18363ed900eb16843e6c7614f81d49cb32f6" }
 
 [[package]]
 name = "escapism"
@@ -1366,6 +1366,20 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/64/fd/485267356a0d71da38280b5427af3d7269669f824d6b669dede0153c6fcf/fabio-2024.9.0-cp39-cp39-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:8852e542c1756cded055e658c02470da656250747e57149e81fe7ece4ac7bb9a", size = 1374194 },
     { url = "https://files.pythonhosted.org/packages/99/12/116c98e7094b6a70ae2031c524cf04612ca14e59284473f67107a5f9d48c/fabio-2024.9.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6e876a7928473c89c1791b5f2d83b76736ef6af68906e70fc53e1c318e97b145", size = 1343448 },
     { url = "https://files.pythonhosted.org/packages/92/6d/4c17e4d694d97168bb7d780bf10fb45c39f2dcef4aa5790f1b794ef9e09e/fabio-2024.9.0-cp39-cp39-win_amd64.whl", hash = "sha256:b628c6db8816bba49e17c1e8cb0181b40acc5aa58164fb20065c4ce35a5b83b4", size = 1289680 },
+]
+
+[[package]]
+name = "fairmat-readers-transmission"
+version = "0.0.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "pint" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/17/71/5fd70ceb6fa7991e683a19ee60dedbb73348365d97e69c68e8c0481eacbc/fairmat_readers_transmission-0.0.2.tar.gz", hash = "sha256:9038c2402e91984ecd79c53b5adca1bf981b7b62be3405d6830dc84166fc2ea2", size = 46920 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5b/95/0e87572ea39a8e04aafa41b856f8ab089b7a7d5bd3e8fec2bef32bf1b058/fairmat_readers_transmission-0.0.2-py3-none-any.whl", hash = "sha256:bce6eba9a0160afa1f21dc46d12cc1b5754ea0c9db66732bea84992d3ecde9e4", size = 16647 },
 ]
 
 [[package]]
@@ -3716,8 +3730,8 @@ source = { git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8
 
 [[package]]
 name = "nomad-analysis"
-version = "0.0.6"
-source = { git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=7f2fe10084953e2827389e2bcb42df6b106ab484#7f2fe10084953e2827389e2bcb42df6b106ab484" }
+version = "0.0.7"
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=cc602021f95ad5b1bc921c6835e76561d28f0e76#cc602021f95ad5b1bc921c6835e76561d28f0e76" }
 dependencies = [
     { name = "nbformat" },
     { name = "nomad-lab" },
@@ -3767,14 +3781,14 @@ plugins = [
 [package.metadata]
 requires-dist = [
     { name = "eelsdbconverter", marker = "extra == 'plugins'", git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point" },
-    { name = "epic-scraper", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/EPIC_scraper?rev=278b0a1a9a6a6fdd1d893cf65513194cda668a01" },
+    { name = "epic-scraper", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/EPIC_scraper?rev=debd18363ed900eb16843e6c7614f81d49cb32f6" },
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
-    { name = "nomad-analysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=7f2fe10084953e2827389e2bcb42df6b106ab484" },
+    { name = "nomad-analysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=cc602021f95ad5b1bc921c6835e76561d28f0e76" },
     { name = "nomad-ikz-raman", marker = "extra == 'plugins'", git = "https://github.com/IKZ-Berlin/IKZ_raman.git?rev=797a36fa985412e00527d4298f763eb2318a3ec4" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = "==1.3.14.dev40+ge27ebd5c4" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = "==1.3.14.dev40+ge27ebd5c4" },
-    { name = "nomad-material-processing", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=d8efe78e816e050caebd3fa7aa90528337db8bec" },
-    { name = "nomad-measurements", marker = "extra == 'plugins'" },
+    { name = "nomad-material-processing", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=e6ed11430e76f8964652b07b30f4a36bcd9eeb2f" },
+    { name = "nomad-measurements", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-measurements.git?rev=c297d6b4fb3faa47a6a9076d031310f8d3dbe256" },
     { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = ">=1.0" },
     { name = "nomad-normalizer-plugin-dos", marker = "extra == 'plugins'", specifier = ">=1.0" },
     { name = "nomad-normalizer-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0" },
@@ -3789,7 +3803,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
-    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=38dedd85e8c6b0157b6a8fa4fcbf3e088c7e469e" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" },
     { name = "plotly", marker = "extra == 'plugins'", specifier = "<6.0.0" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
@@ -3941,24 +3955,22 @@ parsing = [
 
 [[package]]
 name = "nomad-material-processing"
-version = "1.0.5.dev8+gd8efe78"
-source = { git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=d8efe78e816e050caebd3fa7aa90528337db8bec#d8efe78e816e050caebd3fa7aa90528337db8bec" }
+version = "1.0.5"
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=e6ed11430e76f8964652b07b30f4a36bcd9eeb2f#e6ed11430e76f8964652b07b30f4a36bcd9eeb2f" }
 dependencies = [
     { name = "nomad-lab" },
 ]
 
 [[package]]
 name = "nomad-measurements"
-version = "1.0.1"
-source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+version = "1.1.1.dev9+gc297d6b"
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-measurements.git?rev=c297d6b4fb3faa47a6a9076d031310f8d3dbe256#c297d6b4fb3faa47a6a9076d031310f8d3dbe256" }
 dependencies = [
+    { name = "fairmat-readers-transmission" },
     { name = "fairmat-readers-xrd" },
     { name = "nomad-lab" },
+    { name = "nomad-material-processing" },
     { name = "xmltodict" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/4b/c512f305ac7e88f5a222837cf29138f0b885aa210dbf0f4976166c60194e/nomad_measurements-1.0.1.tar.gz", hash = "sha256:11b6a7f995be9fc9277ad6dc6794592af570aefff132146be054dd3e6ca90536", size = 7396010 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/de/5b/95ad38deb27995c91f6a94460f0d622ad2f71313d834533133cc05a15638/nomad_measurements-1.0.1-py3-none-any.whl", hash = "sha256:f817acf61927ab26fbf0625265af40a0bb62910511e23a70f2e3409db77b3038", size = 24339 },
 ]
 
 [[package]]
@@ -4703,10 +4715,9 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=38dedd85e8c6b0157b6a8fa4fcbf3e088c7e469e#38dedd85e8c6b0157b6a8fa4fcbf3e088c7e469e" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc#d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc" }
 dependencies = [
     { name = "epic-scraper" },
-    { name = "nomad-analysis" },
     { name = "nomad-lab" },
     { name = "nomad-material-processing" },
     { name = "nomad-measurements" },
