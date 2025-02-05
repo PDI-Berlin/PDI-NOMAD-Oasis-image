@@ -44,7 +44,7 @@ plugins = [
   "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@cc602021f95ad5b1bc921c6835e76561d28f0e76",
   "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@debd18363ed900eb16843e6c7614f81d49cb32f6",
   "statsmodels",
-  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc",
+  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@9430712cc8101d5c79306ad342bfe36dde17355a",
   "nomad_ikz_raman @ git+https://github.com/IKZ-Berlin/IKZ_raman.git@797a36fa985412e00527d4298f763eb2318a3ec4",
   "plotly<6.0.0",
 ]
