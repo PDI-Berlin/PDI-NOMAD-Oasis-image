@@ -3803,7 +3803,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
-    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=9430712cc8101d5c79306ad342bfe36dde17355a" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" },
     { name = "plotly", marker = "extra == 'plugins'", specifier = "<6.0.0" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
@@ -4715,7 +4715,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc#d0f8c15e11d06f00b9561dd800f4e7ce89fcd5bc" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=9430712cc8101d5c79306ad342bfe36dde17355a#9430712cc8101d5c79306ad342bfe36dde17355a" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-lab" },
