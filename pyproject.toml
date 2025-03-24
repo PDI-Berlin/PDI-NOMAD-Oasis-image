@@ -40,11 +40,11 @@ plugins = [
   "nomad-parser-plugins-workflow>=1.0",
   "nomad-parser-plugins-database>=1.0",
   "nomad-measurements @ git+https://github.com/FAIRmat-NFDI/nomad-measurements.git@c297d6b4fb3faa47a6a9076d031310f8d3dbe256",
-  "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@e6ed11430e76f8964652b07b30f4a36bcd9eeb2f",
+  "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@38edad53b1d78010a6e77590e2ba178a7f9fb99d",
   "nomad-analysis @ git+https://github.com/FAIRmat-NFDI/nomad-analysis.git@cc602021f95ad5b1bc921c6835e76561d28f0e76",
   "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@debd18363ed900eb16843e6c7614f81d49cb32f6",
   "statsmodels",
-  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@b2b7ef3158bc577097b31db34c7a6eddecbfc42a",
+  "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@5f6bab168d2c6f7a246051f11e013ae531d01bcf",
   "nomad_ikz_raman @ git+https://github.com/IKZ-Berlin/IKZ_raman.git@797a36fa985412e00527d4298f763eb2318a3ec4",
   "plotly<6.0.0",
 ]
