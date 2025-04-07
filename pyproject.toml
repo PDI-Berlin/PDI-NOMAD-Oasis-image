@@ -56,7 +56,11 @@ extra-index-url = [
   "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
 ]
 constraint-dependencies = ["hyperspy>=1.7.6"]
-# prerelease = "disallow"
+# The prerelease key likely refers to a setting that controls how 
+# prerelease versions of dependencies are handled. 
+# Prerelease versions are typically used for testing and may not be stable, 
+# so this setting could be useful in ensuring only stable versions are used in the project.
+prerelease = "disallow"
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]
