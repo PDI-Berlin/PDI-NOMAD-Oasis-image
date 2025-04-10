@@ -76,7 +76,7 @@ Below are instructions for how to deploy this NOMAD Oasis distribution
 
 6. Optionally you can now test that NOMAD is running with
 
-    ```
+    ```sh
     curl localhost/nomad-oasis/alive
     ```
 
