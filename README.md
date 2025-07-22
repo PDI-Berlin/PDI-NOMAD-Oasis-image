@@ -1,6 +1,6 @@
 ![docker image](https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image/actions/workflows/docker-publish.yml/badge.svg)
 
-# PDI-Berlin's NOMAD Oasis Distribution
+# PDI-Berlin's NOMAD Oasis Distribution 
 
 This repository is a template for creating your own custom NOMAD Oasis distribution image.
 Click [here](https://github.com/new?template_name=nomad-distro-template&template_owner=FAIRmat-NFDI)
