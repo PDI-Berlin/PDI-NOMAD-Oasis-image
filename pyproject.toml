@@ -28,9 +28,9 @@ repository = "https://github.com/FAIRmat-NFDI/nomad-distro-template"
 
 [project.optional-dependencies]
 plugins = [
-  "nomad-measurements",
-  "nomad-material-processing",
-  "nomad-analysis",
+  "nomad-measurements>=1.2.3",
+  "nomad-material-processing>=1.0.5",
+  "nomad-analysis>=0.1.4",
   "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@debd18363ed900eb16843e6c7614f81d49cb32f6",
   "statsmodels",
   "pdi-nomad-plugin @ git+https://github.com/PDI-Berlin/pdi-nomad-plugin.git@5f6bab168d2c6f7a246051f11e013ae531d01bcf",
