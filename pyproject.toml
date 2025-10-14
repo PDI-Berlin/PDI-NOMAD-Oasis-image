@@ -17,7 +17,7 @@ version = "0.1"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
-dependencies = ["nomad-lab[parsing, infrastructure] == 1.3.18.dev243+g0e6ada447"] # #>= 1.3.14 ==1.3.14.dev117+g1639760e9"] # nomad-lab version
+dependencies = ["nomad-lab[parsing, infrastructure] == 1.3.18.dev243+g0e6ada447"] # #>= 1.3.14 ==1.3.14.dev117+g1639760e9" # nomad-lab version
 
 [project.optional-dependencies]
 plugins = [
@@ -49,7 +49,7 @@ plugins = [
   "plotly<6.0.0",
 ]
 jupyter = []
-dev = ["nomad-lab[parsing, infrastructure, dev] == 1.3.18.dev243+g0e6ada447"] # >=1.3.14 ==1.3.14.dev117+g1639760e9"] # nomad-lab version
+dev = ["nomad-lab[parsing, infrastructure, dev] == 1.3.18.dev243+g0e6ada447"] # >=1.3.14 ==1.3.14.dev117+g1639760e9" # nomad-lab version
 
 [tool.uv]
 extra-index-url = [
@@ -60,7 +60,7 @@ constraint-dependencies = ["hyperspy>=1.7.6"]
 # prerelease versions of dependencies are handled. 
 # Prerelease versions are typically used for testing and may not be stable, 
 # so this setting could be useful in ensuring only stable versions are used in the project.
-prerelease = "disallow"
+prerelease = "allow"
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]
