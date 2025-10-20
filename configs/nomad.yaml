@@ -12,7 +12,11 @@ north:
   tools:
     options:
       jupyter:
+<<<<<<< HEAD
         image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:main
+=======
+        image: ghcr.io/fairmat-nfdi/nomad-distro-template/jupyter:main
+>>>>>>> template/main
 
 meta:
   deployment: "oasis"
@@ -20,7 +24,7 @@ meta:
   maintainer_email: "me@my-oasis.org"
 
 logstash:
-  enable: false
+  enabled: false
 
 mongo:
   db_name: nomad_oasis_v1
