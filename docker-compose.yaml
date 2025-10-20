@@ -71,6 +71,7 @@ services:
   worker:
     restart: unless-stopped
     image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v1.0.1
+    platform: linux/amd64
     container_name: nomad_oasis_worker_pdi
     environment:
       NOMAD_SERVICE: nomad_oasis_worker
@@ -96,6 +97,7 @@ services:
   app:
     restart: unless-stopped
     image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v1.0.1
+    platform: linux/amd64
     container_name: nomad_oasis_app_pdi
     environment:
       NOMAD_SERVICE: nomad_oasis_app
@@ -137,6 +139,7 @@ services:
   north:
     restart: unless-stopped
     image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v1.0.1
+    platform: linux/amd64
     container_name: nomad_oasis_north_pdi
     environment:
       NOMAD_SERVICE: nomad_oasis_north
@@ -174,6 +177,7 @@ services:
   logtransfer:
     restart: unless-stopped
     image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v1.0.1
+    platform: linux/amd64
     container_name: nomad_oasis_logtransfer_pdi
     environment:
       NOMAD_SERVICE: nomad_oasis_logtransfer
