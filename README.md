@@ -1,20 +1,8 @@
 ![docker image](https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image/actions/workflows/docker-publish.yml/badge.svg)
 
 
-# NOMAD Oasis Distribution *Template*
-This repository is a template for creating your own custom NOMAD Oasis distribution image.
-Click [here](https://github.com/new?template_name=nomad-distro-template&template_owner=FAIRmat-NFDI)
-to use this template, or click the `Use this template` button in the upper right corner of
-the main GitHub page for this template.
 
-> [!CAUTION]
-> The templated repository will run a GitHub action on creation which might take a few minutes.
-> After the workflow finishes you should refresh the page and this message should disappear.
-> If this message persists you might need to trigger the workflow manually by navigating to the
-> "Actions" tab at the top, clicking "Template Repository Initialization" on the left side,
-> and triggering it by clicking "Run workflow" under the "Run workflow" button on the right.
-
-# FAIRmat-NFDI's NOMAD Oasis Distribution
+# PDI-Berlin's NOMAD Oasis Distribution
 
 This is the NOMAD Oasis distribution of PDI-Berlin.
 Below are instructions for how to [deploy this distribution](#deploying-the-distribution)
@@ -315,9 +303,9 @@ This automated process helps ensure that your dependencies stay up to date, impr
 
 ## Customizing Documentation
 
-By default, documentation is built using the [nomad-docs](https://github.com/FAIRmat-NFDI/nomad-docs) repository. However, if you'd like to customize the documentation for your Oasis instance, you can easily do so.
+By default, documentation is built using the [nomad-docs](https://github.com/PDI-Berlin/nomad-docs) repository. However, if you'd like to customize the documentation for your Oasis instance, you can easily do so.
 
-1. First, [fork the nomad-docs repository](https://github.com/FAIRmat-NFDI/nomad-docs/fork).
+1. First, [fork the nomad-docs repository](https://github.com/PDI-Berlin/nomad-docs/fork).
 2. Make your desired changes in your fork.
 3. Update the `NOMAD_DOCS_REPO` variable in the [.github/workflows/docker-publish.yml](./.github/workflows/docker-publish.yml#L19) file to point to the URL of your forked repository.
 
@@ -360,7 +348,7 @@ Ideally all workflows should be triggered automatically but you might need to ru
 
 ## FAQ/Trouble shooting
 
-_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/FAIRmat-NFDI/nomad-distro-template/manifests/main": unauthorized`
+_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/PDI-Berlin/PDI-NOMAD-Oasis-image/manifests/main": unauthorized`
 _when trying to pull my docker image._
 
 Most likely you have not made the package public or provided a personal access token (PAT).
