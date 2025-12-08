@@ -2545,11 +2545,15 @@ wheels = [
 
 [[package]]
 name = "nomad-analysis"
-version = "0.0.7"
-source = { git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=cc602021f95ad5b1bc921c6835e76561d28f0e76#cc602021f95ad5b1bc921c6835e76561d28f0e76" }
+version = "0.2.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nbformat" },
     { name = "nomad-lab" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/67/da/a17bcd201ce4bbdd5f3f818d430569e3c4a1301a771c17cdec274f0517ff/nomad_analysis-0.2.0.tar.gz", hash = "sha256:0e71cf62c97efccdfc051eebc627c5f930a7799da2582499cbf088c409005216", size = 127686, upload-time = "2025-11-04T16:17:12.862Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a7/39/c0bcb3122b3e419170888fca835614a731e94fa6a7b876d51653968457cc/nomad_analysis-0.2.0-py3-none-any.whl", hash = "sha256:e4dfe40eec14342261b60436596f02e7d8f07fcd8442dabd9ee732746a40941f", size = 30078, upload-time = "2025-11-04T16:17:11.699Z" },
 ]
 
 [[package]]
@@ -2580,12 +2584,12 @@ plugins = [
 requires-dist = [
     { name = "epic-scraper", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/EPIC_scraper?rev=debd18363ed900eb16843e6c7614f81d49cb32f6" },
     { name = "jupyter-events", marker = "extra == 'jupyter'" },
-    { name = "nomad-analysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-analysis.git?rev=cc602021f95ad5b1bc921c6835e76561d28f0e76" },
+    { name = "nomad-analysis", marker = "extra == 'plugins'", specifier = ">=0.2.0" },
     { name = "nomad-lab", extras = ["dev", "infrastructure", "parsing"], marker = "extra == 'dev'", specifier = ">=1.3.4" },
     { name = "nomad-lab", extras = ["infrastructure", "parsing"], specifier = ">=1.4.0" },
-    { name = "nomad-material-processing", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=38edad53b1d78010a6e77590e2ba178a7f9fb99d" },
-    { name = "nomad-measurements", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-measurements.git?rev=c297d6b4fb3faa47a6a9076d031310f8d3dbe256" },
-    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/glaidedata/pdi-nomad-plugin.git?rev=39ba26312bd690eefb74ce546bb8391a2213fe63" },
+    { name = "nomad-material-processing", marker = "extra == 'plugins'", specifier = ">=1.0.5" },
+    { name = "nomad-measurements", marker = "extra == 'plugins'", specifier = ">=1.3.4" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.0.0" },
     { name = "setuptools" },
     { name = "statsmodels", marker = "extra == 'plugins'" },
 ]
@@ -2684,22 +2688,28 @@ infrastructure = [
 
 [[package]]
 name = "nomad-material-processing"
-version = "1.0.6.dev11+g38edad53b"
-source = { git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=38edad53b1d78010a6e77590e2ba178a7f9fb99d#38edad53b1d78010a6e77590e2ba178a7f9fb99d" }
+version = "1.0.5"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/52/41/8bfa81114664fc04a504039d98b2b4fb633bd7bb264605b3bce14286fa60/nomad_material_processing-1.0.5.tar.gz", hash = "sha256:4820d200c768239d9d2503a9d8b4aa8b4eb31e0b0a2b5bd881aa62484b5beb1c", size = 586113, upload-time = "2025-01-30T10:15:52.564Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/25/10/6a7f8e83098dc88c608e1974524dcaf8339ad95d44e27804e343f8c99b12/nomad_material_processing-1.0.5-py3-none-any.whl", hash = "sha256:7091a2a8c26054fb64d1fa222ae6e6ba525acb3d2af974d22573d0a35bfd42a7", size = 54698, upload-time = "2025-01-30T10:15:50.576Z" },
 ]
 
 [[package]]
 name = "nomad-measurements"
-version = "1.1.1.dev9+gc297d6b4f"
-source = { git = "https://github.com/FAIRmat-NFDI/nomad-measurements.git?rev=c297d6b4fb3faa47a6a9076d031310f8d3dbe256#c297d6b4fb3faa47a6a9076d031310f8d3dbe256" }
+version = "1.3.4"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "fairmat-readers-transmission" },
     { name = "fairmat-readers-xrd" },
     { name = "nomad-lab" },
-    { name = "nomad-material-processing" },
-    { name = "xmltodict" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ff/99/eb042ab7f101d6e91d8a5a886fdb4a0efad952ea80676336cd89988d0163/nomad_measurements-1.3.4.tar.gz", hash = "sha256:edebc8c1eda38c45d2e9b99c435d2383715187268ef13be952c0e6b8169ad4d1", size = 9452580, upload-time = "2025-11-28T15:27:00.623Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/6f/b98fae7c336b92436c792c25be29019378d3913a868bd4dd49b6b23ed10a/nomad_measurements-1.3.4-py3-none-any.whl", hash = "sha256:13db29b415ce21beec2aa05c3769b0a0e1705a801ca75cb2fbabab6357c53b4c", size = 68901, upload-time = "2025-11-28T15:26:59.595Z" },
 ]
 
 [[package]]
@@ -3170,7 +3180,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/glaidedata/pdi-nomad-plugin.git?rev=39ba26312bd690eefb74ce546bb8391a2213fe63#39ba26312bd690eefb74ce546bb8391a2213fe63" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.0.0#e1c2e21a4c439145d3933bd0a5c3609056712e62" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-lab" },
