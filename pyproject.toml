@@ -1,23 +1,30 @@
 [build-system]
-requires = ["setuptools>=64"]
+requires = ["setuptools>=64", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+fallback_version = "0.0"
 
 [project]
 classifiers = [
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ]
 name = "nomad-distribution"
 description = "nomad distribution template"
-version = "0.1"
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
-dependencies = ["nomad-lab[parsing, infrastructure] == 1.3.18.dev243+g0e6ada447"] # #>= 1.3.14 ==1.3.14.dev117+g1639760e9" # nomad-lab version
+dependencies = [
+  "nomad-lab[parsing, infrastructure]>=1.4.0",
+  "setuptools",
+]
+
 
 [project.optional-dependencies]
 plugins = [
@@ -48,8 +55,11 @@ plugins = [
   # "nomad_ikz_raman @ git+https://github.com/IKZ-Berlin/IKZ_raman.git@797a36fa985412e00527d4298f763eb2318a3ec4",
   "plotly<6.0.0",
 ]
-jupyter = []
-dev = ["nomad-lab[parsing, infrastructure, dev] == 1.3.18.dev243+g0e6ada447"] # >=1.3.14 ==1.3.14.dev117+g1639760e9" # nomad-lab version
+jupyter = ["jupyter-events"]
+gpu-action = []
+cpu-action = []
+
+dev = ["nomad-lab[parsing, infrastructure, dev]>=1.3.4"]
 
 [tool.uv]
 extra-index-url = [
