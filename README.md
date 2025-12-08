@@ -1,6 +1,7 @@
 ![docker image](https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image/actions/workflows/docker-publish.yml/badge.svg)
 
 
+
 # PDI-Berlin's NOMAD Oasis Distribution
 
 This is the NOMAD Oasis distribution of PDI-Berlin.
@@ -277,7 +278,7 @@ Note that the `base-notebook` image is more lightweight and uses less disk space
 
 The image is quite large and might cause a timeout the first time it is run. In order to avoid this you can pre pull the image with:
 
-```
+```sh
 docker pull ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:main
 ```
 
@@ -314,9 +315,9 @@ This automated process helps ensure that your dependencies stay up to date, impr
 
 ## Customizing Documentation
 
-By default, documentation is built using the [nomad-docs](https://github.com/FAIRmat-NFDI/nomad-docs) repository. However, if you'd like to customize the documentation for your Oasis instance, you can easily do so.
+By default, documentation is built using the [nomad-docs](https://github.com/PDI-Berlin/nomad-docs) repository. However, if you'd like to customize the documentation for your Oasis instance, you can easily do so.
 
-1. First, [fork the nomad-docs repository](https://github.com/FAIRmat-NFDI/nomad-docs/fork).
+1. First, [fork the nomad-docs repository](https://github.com/PDI-Berlin/nomad-docs/fork).
 2. Make your desired changes in your fork.
 3. Update the `NOMAD_DOCS_REPO` variable in the [.github/workflows/docker-publish.yml](./.github/workflows/docker-publish.yml#L19) file to point to the URL of your forked repository.
 
