@@ -54,7 +54,7 @@ constraint-dependencies = ["hyperspy>=1.7.6"]
 prerelease = "allow"
 
 [tool.uv.sources]
-pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", rev = "v1.0.0" }
+pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", rev = "v1.0.1" }
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]
