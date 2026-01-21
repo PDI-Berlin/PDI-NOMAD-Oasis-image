@@ -25,7 +25,6 @@ dependencies = [
   "setuptools",
 ]
 
-
 [project.urls]
 repository = "https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image"
 
