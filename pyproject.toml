@@ -25,6 +25,7 @@ dependencies = [
   "setuptools",
 ]
 
+
 [project.urls]
 repository = "https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image"
 
@@ -51,6 +52,7 @@ extra-index-url = [
 ]
 constraint-dependencies = ["hyperspy>=1.7.6"]
 prerelease = "allow"
+
 
 [tool.uv.sources]
 pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", rev = "v1.0.1" }
