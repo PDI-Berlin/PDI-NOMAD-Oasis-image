@@ -34,7 +34,7 @@ plugins = [
   "nomad-measurements",
   "nomad-material-processing>=1.0.5",
   "nomad-analysis>=0.2.0",
-  "epic_scraper @ git+https://github.com/PDI-Berlin/EPIC_scraper@debd18363ed900eb16843e6c7614f81d49cb32f6",
+  "epic_scraper",
   "statsmodels",
   "pdi-nomad-plugin",
   # "nomad_ikz_raman @ git+https://github.com/IKZ-Berlin/IKZ_raman.git@797a36fa985412e00527d4298f763eb2318a3ec4",
@@ -56,6 +56,7 @@ prerelease = "allow"
 
 [tool.uv.sources]
 pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", rev = "v1.0.1" }
+epic_scraper = { git = "https://github.com/PDI-Berlin/EPIC_scraper.git", rev = "v1.0.0" }
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]
