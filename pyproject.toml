@@ -55,7 +55,7 @@ prerelease = "explicit"
 
 
 [tool.uv.sources]
-pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", rev = "v1.0.2" }
+pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", rev = "v1.0.3" }
 epic_scraper = { git = "https://github.com/PDI-Berlin/EPIC_scraper.git", rev = "v1.0.0" }
 
 [tool.setuptools.packages.find]
