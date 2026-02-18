@@ -18,6 +18,7 @@ env:
   JUPYTER_VERSION: "2025-04-14"
   # If you want to include custom documentation, create a fork of the repo below and link the forked repo here
   NOMAD_DOCS_REPO: https://github.com/FAIRmat-NFDI/nomad-docs.git
+  NOMAD_DOCS_REPO_REF: "main"
   # If you want to skip the tests for some plugins, add them to the list below
   PLUGIN_TESTS_PLUGINS_TO_SKIP: |
     workflowparsers
@@ -162,6 +163,34 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ github.repository }}${{ matrix.image_suffix }}
 
+      - name: Derive NOMAD docs ref from locked nomad-lab
+        id: docs_ref
+        run: |
+          set -euo pipefail
+          NOMAD_LAB_VERSION=$(
+            sed -n '/name = "nomad-lab"/{n;s/version = "\(.*\)"/\1/p;q;}' uv.lock
+          )
+          if [ -z "${NOMAD_LAB_VERSION}" ]; then
+            echo "ref=${NOMAD_DOCS_REPO_REF}" >> "$GITHUB_OUTPUT"
+            echo "package=nomad-docs" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Strip local/dev suffixes, e.g. 1.4.2.dev43+g123 -> 1.4.2
+          BASE_VERSION="${NOMAD_LAB_VERSION%%+*}"
+          BASE_VERSION="${BASE_VERSION%%.dev*}"
+          DOCS_TAG="v${BASE_VERSION}"
+
+          if git ls-remote --exit-code --tags "${NOMAD_DOCS_REPO}" "refs/tags/${DOCS_TAG}" >/dev/null 2>&1; then
+            echo "ref=${DOCS_TAG}" >> "$GITHUB_OUTPUT"
+            # Prefer pinning docs python package to the same docs git ref.
+            echo "package=git+${NOMAD_DOCS_REPO}@${DOCS_TAG}" >> "$GITHUB_OUTPUT"
+          else
+            echo "nomad-docs tag ${DOCS_TAG} not found in ${NOMAD_DOCS_REPO}; falling back to unpinned nomad-docs package." >&2
+            echo "ref=${NOMAD_DOCS_REPO_REF}" >> "$GITHUB_OUTPUT"
+            echo "package=nomad-docs" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
@@ -170,6 +199,8 @@ jobs:
             UV_VERSION=${{ env.UV_VERSION }}
             PYTHON_VERSION=${{ env.PYTHON_VERSION }}
             NOMAD_DOCS_REPO=${{ env.NOMAD_DOCS_REPO }}
+            NOMAD_DOCS_REPO_REF=${{ steps.docs_ref.outputs.ref }}
+            NOMAD_DOCS_PACKAGE=${{ steps.docs_ref.outputs.package }}
             JUPYTER_VERSION=${{ env.JUPYTER_VERSION }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
