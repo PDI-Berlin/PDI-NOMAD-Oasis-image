@@ -179,7 +179,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           target: ${{ matrix.target }}
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
@@ -195,6 +195,7 @@ jobs:
   # Job 4: Run example upload tests and entrypoint tests
   run_tests:
     name: Run example upload tests and entrypoint tests
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     env:
