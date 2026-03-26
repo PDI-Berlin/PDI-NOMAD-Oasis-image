@@ -1,6 +1,7 @@
 services:
   api_host: 'localhost'
   api_base_path: '/nomad-oasis'
+  admin_user_id: '6b03e829-3ea1-432f-9977-fff5e0c667a8'
 
 oasis:
   is_oasis: true
