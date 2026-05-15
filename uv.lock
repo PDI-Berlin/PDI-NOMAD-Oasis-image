@@ -2944,7 +2944,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.0.8#91db818eb9b6d7fdb1c2214c53795859d7b29285" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.0.8#d771387b56f4f0941effcea1575288d47c62f66f" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-lab" },
