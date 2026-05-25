@@ -2467,15 +2467,15 @@ wheels = [
 
 [[package]]
 name = "nomad-analysis"
-version = "0.2.0"
+version = "0.2.2"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nbformat" },
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/67/da/a17bcd201ce4bbdd5f3f818d430569e3c4a1301a771c17cdec274f0517ff/nomad_analysis-0.2.0.tar.gz", hash = "sha256:0e71cf62c97efccdfc051eebc627c5f930a7799da2582499cbf088c409005216", size = 127686, upload-time = "2025-11-04T16:17:12.862Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/34/de/e955f97f4848d94864247b95041930a45edaaca0ccee315cf92419d69647/nomad_analysis-0.2.2.tar.gz", hash = "sha256:964ac5573d5f635e43c6d3a64e455220289545565f77f1542b18759d266d9e0d", size = 136988, upload-time = "2026-03-30T15:03:22.174Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a7/39/c0bcb3122b3e419170888fca835614a731e94fa6a7b876d51653968457cc/nomad_analysis-0.2.0-py3-none-any.whl", hash = "sha256:e4dfe40eec14342261b60436596f02e7d8f07fcd8442dabd9ee732746a40941f", size = 30078, upload-time = "2025-11-04T16:17:11.699Z" },
+    { url = "https://files.pythonhosted.org/packages/3c/ac/98c86fa356452a2a3e9bf4eda4e9aa305c8fd43d1618d3afdf8d295a704c/nomad_analysis-0.2.2-py3-none-any.whl", hash = "sha256:401ac9891a7cbccb1b3e04bde7bc83a065fa3472fdaa1b0e9d89361db4342a36", size = 30702, upload-time = "2026-03-30T15:03:20.932Z" },
 ]
 
 [[package]]
