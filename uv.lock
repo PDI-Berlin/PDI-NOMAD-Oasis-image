@@ -2671,7 +2671,7 @@ requires-dist = [
     { name = "nomad-lab", extras = ["infrastructure", "parsing"], specifier = "==1.4.2" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'", specifier = ">=1.0.5" },
     { name = "nomad-measurements", marker = "extra == 'plugins'" },
-    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.0" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.1" },
     { name = "setuptools" },
     { name = "statsmodels", marker = "extra == 'plugins'" },
 ]
@@ -3129,7 +3129,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.0#3405ee9a478ba4cc9e1133986b45f9d3b7e4b142" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.1#42735345338e5569ef7dbe2c782399e40223edef" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-lab" },
