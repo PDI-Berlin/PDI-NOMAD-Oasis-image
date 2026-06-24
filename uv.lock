@@ -2927,6 +2927,7 @@ jupyter = [
 plugins = [
     { name = "epic-scraper" },
     { name = "nomad-analysis" },
+    { name = "nomad-gui" },
     { name = "nomad-material-processing" },
     { name = "nomad-measurements" },
     { name = "nomad-north-jupyter" },
@@ -2949,6 +2950,24 @@ requires-dist = [
     { name = "statsmodels", marker = "extra == 'plugins'" },
 ]
 provides-extras = ["plugins", "jupyter", "gpu-action", "cpu-action", "dev"]
+
+[[package]]
+name = "nomad-gui"
+version = "2.0.0a2.dev600+gb68c64dd7"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "fastapi" },
+    { name = "filelock" },
+    { name = "nomad-lab", extra = ["infrastructure"] },
+    { name = "numpy" },
+    { name = "plotly" },
+    { name = "starlette" },
+]
+sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/64043479d76521d7325b3ec323a0fa5dad769b3af29b6a03dc00dba84a734fdd/nomad_gui-2.0.0a2.dev600+gb68c64dd7.tar.gz", hash = "sha256:64043479d76521d7325b3ec323a0fa5dad769b3af29b6a03dc00dba84a734fdd" }
+wheels = [
+    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/de78eeaed96a631e92fca58aaf535c87f29f57675ddf237eac27748f22227392/nomad_gui-2.0.0a2.dev600+gb68c64dd7-py3-none-any.whl", hash = "sha256:de78eeaed96a631e92fca58aaf535c87f29f57675ddf237eac27748f22227392" },
+]
 
 [[package]]
 name = "nomad-lab"
