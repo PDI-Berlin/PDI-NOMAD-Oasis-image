@@ -31,6 +31,7 @@ repository = "https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image"
 
 [project.optional-dependencies]
 plugins = [
+  "nomad-gui>=2.0.0a2.dev600",
   "nomad-measurements",
   "nomad-material-processing>=1.0.5",
   "nomad-analysis>=0.2.0",
