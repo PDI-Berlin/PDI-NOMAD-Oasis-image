@@ -20,17 +20,15 @@ dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
-dependencies = [
-  "nomad-lab[parsing, infrastructure]==1.4.2",
-  "setuptools",
-]
-
+dependencies = ["nomad-lab[infrastructure]==1.4.2"]
 
 [project.urls]
 repository = "https://github.com/PDI-Berlin/PDI-NOMAD-Oasis-image"
 
 [project.optional-dependencies]
+# Add your plugins to the list below.
 plugins = [
+  "nomad-north-jupyter>=0.2.5",
   "nomad-measurements",
   "nomad-material-processing>=1.0.5",
   "nomad-analysis>=0.2.0",
@@ -44,7 +42,7 @@ jupyter = ["jupyter-events"]
 gpu-action = []
 cpu-action = []
 
-dev = ["nomad-lab[parsing, infrastructure, dev]==1.4.2"]
+dev = ["nomad-lab[infrastructure, dev]==1.4.2"]
 
 [tool.uv]
 extra-index-url = [
