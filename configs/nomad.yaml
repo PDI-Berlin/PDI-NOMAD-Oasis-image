@@ -25,6 +25,7 @@ logstash:
 
 temporal:
   enabled: true
+  max_concurrent_activities: 3
 
 mongo:
   db_name: nomad_oasis_v1
