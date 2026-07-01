@@ -22,7 +22,7 @@ requires-python = ">=3.10"
 license = { file = "LICENSE" }
 dependencies = [
 "nomad-lab[infrastructure]==1.4.2",
-"fastapi>=0.99.0,<0.137.0",  # TODO: remove when Optimade is compatible with FastAPI
+"fastapi>=0.138.2,<0.139.0",  # TODO: remove when Optimade is compatible with FastAPI
 ]
 
 [project.urls]
