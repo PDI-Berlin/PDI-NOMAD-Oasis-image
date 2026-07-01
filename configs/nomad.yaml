@@ -1,4 +1,5 @@
 services:
+  https: false
   api_host: "localhost"
   api_base_path: "/nomad-oasis"
   upload_limit: 1000
@@ -7,13 +8,13 @@ services:
 oasis:
   is_oasis: true
   uses_central_user_management: true
-  
-north:
-  jupyterhub_crypt_key: "978bfb2e13a8448a253c629d8dd84ff89587f30e635b753153960930cad9d36d"
-  tools:
+
+plugins:
+  entry_points:
     options:
-      jupyter:
-        image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:main
+      nomad_north_jupyter.north_tools:jupyter:
+        north_tool:
+          image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:main
 
 meta:
   deployment: "oasis"
@@ -25,6 +26,7 @@ logstash:
 
 temporal:
   enabled: true
+  max_concurrent_activities: 3
 
 mongo:
   db_name: nomad_oasis_v1
