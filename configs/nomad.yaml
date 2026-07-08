@@ -1,5 +1,5 @@
 services:
-  https: false
+  https: true
   api_host: "intra8-02.pdi-berlin.de"
   api_base_path: "/nomad-oasis"
   upload_limit: 1000
