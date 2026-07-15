@@ -4,7 +4,7 @@ services:
   api_base_path: "/nomad-oasis"
   upload_limit: 1000
   admin_user_id: "6b03e829-3ea1-432f-9977-fff5e0c667a8"
-  
+
 oasis:
   is_oasis: true
   uses_central_user_management: true
@@ -34,3 +34,7 @@ mongo:
 elastic:
   entries_index: nomad_oasis_entries_v1
   materials_index: nomad_oasis_materials_v1
+
+north:
+  enabled: true
+  enable_new_hub_api: true
