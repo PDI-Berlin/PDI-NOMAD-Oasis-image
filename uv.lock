@@ -3629,7 +3629,7 @@ requires-dist = [
     { name = "epic-scraper", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/EPIC_scraper.git?rev=v1.0.0" },
     { name = "jupyter-events", marker = "extra == 'jupyter'" },
     { name = "nomad-analysis", marker = "extra == 'plugins'", specifier = ">=0.2.0" },
-    { name = "nomad-gui", marker = "extra == 'plugins'", specifier = ">=2.0.0a2.dev600" },
+    { name = "nomad-gui", marker = "extra == 'plugins'", specifier = ">=2.0.0b1" },
     { name = "nomad-lab", extras = ["dev", "infrastructure"], marker = "extra == 'dev'", specifier = "==1.4.3" },
     { name = "nomad-lab", extras = ["infrastructure"], specifier = "==1.4.3" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'", specifier = ">=1.0.5" },
@@ -3642,22 +3642,19 @@ provides-extras = ["plugins", "jupyter", "gpu-action", "cpu-action", "dev"]
 
 [[package]]
 name = "nomad-gui"
-version = "2.0.0a2.dev600+gb68c64dd7"
+version = "2.0.0b1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "click" },
     { name = "fastapi" },
     { name = "filelock" },
     { name = "nomad-lab", extra = ["infrastructure"] },
-    { name = "numpy", version = "2.2.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "numpy", version = "2.4.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version == '3.11.*'" },
-    { name = "numpy", version = "2.5.0", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "plotly" },
     { name = "starlette" },
 ]
-sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/64043479d76521d7325b3ec323a0fa5dad769b3af29b6a03dc00dba84a734fdd/nomad_gui-2.0.0a2.dev600+gb68c64dd7.tar.gz", hash = "sha256:64043479d76521d7325b3ec323a0fa5dad769b3af29b6a03dc00dba84a734fdd" }
+sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/f2eca40656f2caea832928561fb128bb941b1d1545f5324cec1a99c424e6ce8c/nomad_gui-2.0.0b1.tar.gz", hash = "sha256:f2eca40656f2caea832928561fb128bb941b1d1545f5324cec1a99c424e6ce8c" }
 wheels = [
-    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/de78eeaed96a631e92fca58aaf535c87f29f57675ddf237eac27748f22227392/nomad_gui-2.0.0a2.dev600+gb68c64dd7-py3-none-any.whl", hash = "sha256:de78eeaed96a631e92fca58aaf535c87f29f57675ddf237eac27748f22227392" },
+    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/1268d9565af1c21a2eae14bf5bf7e25b540ceb756a695f7a8de24ef4789d2b0a/nomad_gui-2.0.0b1-py3-none-any.whl", hash = "sha256:1268d9565af1c21a2eae14bf5bf7e25b540ceb756a695f7a8de24ef4789d2b0a" },
 ]
 
 [[package]]
