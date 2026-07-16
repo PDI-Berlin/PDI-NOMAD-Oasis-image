@@ -37,4 +37,4 @@ elastic:
 
 north:
   enabled: true
-  enable_new_hub_api: true
+  enable_new_hub_api: false
