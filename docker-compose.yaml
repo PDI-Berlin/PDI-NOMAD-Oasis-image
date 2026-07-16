@@ -297,7 +297,7 @@ services:
   # nomad remote tools hub (JupyterHUB)
   north:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:v1.4.3-r1
+    image: ghcr.io/fairmat-nfdi/nomad-north:main
     platform: linux/amd64
     container_name: nomad_oasis_north_pdi
     environment:
