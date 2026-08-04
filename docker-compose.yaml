@@ -364,8 +364,8 @@ services:
       # - ./configs/nginx_http.conf:/etc/nginx/conf.d/default.conf:ro
       # HTTPS (you need to have a TLS certificate)
       - ./configs/nginx_https.conf:/etc/nginx/conf.d/default.conf:ro
-      - /etc/pki/tls/certs/intra8-02_pdi-berlin_de.pem:/etc/nginx/tls/mounted-nomad-oasis.crt:ro  # Path to your TLS certificate
-      - /etc/pki/tls/private/intra8-02.key:/etc/nginx/tls/mounted-nomad-oasis.key:ro  # Path to your TLS private key
+      - /etc/pki/tls/certs/intra8_pdi-berlin_de.pem:/etc/nginx/tls/mounted-nomad-oasis.crt:ro  # Path to your TLS certificate
+      - /etc/pki/tls/private/intra8.key:/etc/nginx/tls/mounted-nomad-oasis.key:ro  # Path to your TLS private key
     depends_on:
       app:
         condition: service_healthy
