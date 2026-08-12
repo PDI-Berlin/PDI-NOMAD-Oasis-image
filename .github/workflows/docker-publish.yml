@@ -20,7 +20,7 @@ env:
   NOMAD_DOCS_REPO: https://github.com/FAIRmat-NFDI/nomad-docs.git
   NOMAD_DOCS_REPO_REF: ""
   # If you want to skip the tests for some plugins, add them here as a single string where
-  # each plugin is separated by whitespace
+  # each plugin is separated by a comma or a line break
   PLUGIN_TESTS_PLUGINS_TO_SKIP: |
     nomad-gui
 
@@ -36,7 +36,7 @@ jobs:
     name: Update Python Lock File
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           submodules: true
@@ -77,7 +77,7 @@ jobs:
     env:
       PLUGIN_TESTS_CI_NODE_TOTAL: 2
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           submodules: true
@@ -95,7 +95,7 @@ jobs:
         env:
           PLUGIN_TESTS_CI_NODE_INDEX: ${{ matrix.group }}
         run: |
-          # replace the yaml list with a string, use a `,` to separate the plugins
+          # Convert line-separated plugin names to the CLI's comma-separated format.
           PLUGINS_STRING=$(echo "$PLUGIN_TESTS_PLUGINS_TO_SKIP" | tr '\n' ',' | sed 's/,$//')
           uv run \
             --extra plugins \
@@ -131,7 +131,7 @@ jobs:
           #   image_suffix: /cpu-action
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           submodules: true
@@ -186,7 +186,7 @@ jobs:
       JUPYTER_IMAGE: ${{ needs.build.outputs.jupyter_image }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           submodules: true
