@@ -578,6 +578,38 @@ Sometimes there are significant changes in these distribution templates, and you
 ## FAQ/Trouble shooting
 
 _I get an_ `Error response from daemon: Head "https://ghcr.io/v2/PDI-Berlin/PDI-NOMAD-Oasis-image/manifests/main": unauthorized`
+
+## Enabling Monitoring
+
+The distribution includes an optional monitoring stack (Prometheus, Grafana, Alertmanager, cAdvisor, and Temporal UI).
+
+To start the stack with monitoring enabled, run:
+```sh
+docker compose --profile monitoring up -d
+```
+
+### Accessing UI Services
+All monitoring interfaces are secured and routed exclusively through the Nginx reverse proxy (public container ports are disabled for security):
+- **Grafana**: `/grafana/` (e.g., `http://localhost/grafana/`)
+- **Temporal UI**: `/temporal/` (e.g., `http://localhost/temporal/`)
+- **Alertmanager**: Accessible internally by Grafana. Alerts and silences can be managed under Grafana's **Alerting** tab.
+
+### Configuring Keycloak/OIDC & Host Overrides
+The Keycloak SSO integration and external host callback parameters can be configured dynamically by defining host environment variables or setting them in your `.env` file:
+- `MONITORING_KEYCLOAK_REALM` (default: `fairdi_nomad_prod`): Keycloak authentication realm.
+- `MONITORING_KEYCLOAK_CLIENT_ID` (default: `nomad_public`): Keycloak client ID.
+- `MONITORING_KEYCLOAK_CLIENT_SECRET` (default: `test`): Keycloak client secret.
+- `MONITORING_EXTERNAL_URL` (default: `http://localhost`): External base URL for CORS and auth redirects/callbacks (e.g., `https://my-oasis.org`).
+
+> [!IMPORTANT]
+> **External URL Configuration**: It is critical to change `MONITORING_EXTERNAL_URL` in production (e.g. to `https://my-oasis.org`). Leaving it as `http://localhost` will cause SSO login callbacks and CORS headers to fail for remote users.
+
+> [!WARNING]
+> **Access Control & Security**: By default, the monitoring stack connects to the public Keycloak realm (`fairdi_nomad_prod`). This means **any user with a NOMAD account** will be able to authenticate and access your Grafana and Temporal UI pages. For private production deployments, you **must** set up a dedicated Keycloak realm and configure client overrides in your `.env` file.
+
+## FAQ/Trouble shooting
+
+_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/{{ image_name }}/manifests/main": unauthorized`
 _when trying to pull my docker image._
 
    Most likely you have not made the package public or provided a personal access token (PAT).
