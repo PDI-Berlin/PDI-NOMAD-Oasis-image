@@ -273,6 +273,7 @@ services:
       NOMAD_LOGSTASH_HOST: logtransfer
       NOMAD_NORTH_HUB_HOST: north
       NOMAD_TEMPORAL_HOST: temporal
+      NOMAD_TELEMETRY: '{"metrics":{"api_prometheus_enabled":true}}'
     env_file:
       - ./.env
     depends_on:
