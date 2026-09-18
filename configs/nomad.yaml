@@ -2,6 +2,7 @@ services:
   https: true
   api_host: "intra8.pdi-berlin.de"
   api_base_path: "/nomad-oasis"
+  api_port: 443
   upload_limit: 1000
   admin_user_id: "6b03e829-3ea1-432f-9977-fff5e0c667a8"
 
@@ -18,8 +19,8 @@ plugins:
 
 meta:
   deployment: "oasis"
-  deployment_url: "https://my-oasis.org/api"
-  maintainer_email: "me@my-oasis.org"
+  deployment_url: "https://intra8.pdi-berlin.de/nomad-oasis/api"
+  maintainer_email: "timm@pdi-berlin.de"
 
 logstash:
   enabled: false
