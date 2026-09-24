@@ -4092,7 +4092,7 @@ requires-dist = [
     { name = "nomad-material-processing", marker = "extra == 'plugins'", specifier = ">=1.0.5" },
     { name = "nomad-measurements", marker = "extra == 'plugins'", specifier = ">=1.3.8" },
     { name = "nomad-north-jupyter", marker = "extra == 'plugins'", specifier = ">=0.2.6" },
-    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.2" },
+    { name = "pdi-nomad-plugin", marker = "extra == 'plugins'", git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.3" },
     { name = "pynxtools", extras = ["spm"], marker = "extra == 'plugins'", specifier = ">=0.15.1" },
     { name = "pynxtools-spm", marker = "extra == 'plugins'", specifier = ">=0.4.0" },
     { name = "statsmodels", marker = "extra == 'plugins'" },
@@ -5235,7 +5235,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.2#7a1c6a3f1ee21edca2703297f86ae15dae71389a" }
+source = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git?rev=v1.1.3#c21e4025802eb339558bc67d23b382adb05367cc" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-lab" },
