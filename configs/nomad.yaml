@@ -19,7 +19,7 @@ plugins:
 
 meta:
   deployment: "oasis"
-  deployment_url: "https://intra8.pdi-berlin.de/nomad-oasis/api"
+  deployment_url: "https://sun6.pdi-berlin.de/nomad-oasis/api"
   maintainer_email: "timm@pdi-berlin.de"
 
 logstash:
