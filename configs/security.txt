@@ -1,4 +1,4 @@
-Canonical: https://www.pdi-berlin.de/.well-known/security.txt
+Canonical: https://nomad.pdi-berlin.de/.well-known/security.txt
 
 Contact: mailto:security@pdi-berlin.de
 Encryption: https://www.pdi-berlin.de/security/security-at-pdi-berlin-de.asc
