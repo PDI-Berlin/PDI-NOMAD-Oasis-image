@@ -20,7 +20,7 @@ auth:
     include:
       - "*:read"
   authorized_users:
-    - 'Epitaxy_group'
+    - 'PDI_Nomad_Publications'
 
 plugins:
   entry_points:
