@@ -359,7 +359,7 @@ services:
   # nomad proxy (a reverse proxy for nomad)
   proxy:
     restart: unless-stopped
-    image: docker.io/nginx:1.31.1-alpine
+    image: docker.io/nginx:1.31.7-alpine
     container_name: nomad_oasis_proxy
     command: nginx -g 'daemon off;'
     volumes:
@@ -373,6 +373,7 @@ services:
       # - /etc/pki/tls/private/intra8.key:/etc/nginx/tls/mounted-nomad-oasis.key:ro  # Path to your TLS private key
       - /etc/pki/tls/certs/intra8-02_pdi-berlin_de.pem:/etc/nginx/tls/mounted-nomad-oasis.crt:ro  #for test sever intra8-02
       - /etc/pki/tls/private/intra8-02.key:/etc/nginx/tls/mounted-nomad-oasis.key:ro  
+      - ./configs/security.txt:/etc/nginx/security.txt:ro
     depends_on:
       app:
         condition: service_healthy
