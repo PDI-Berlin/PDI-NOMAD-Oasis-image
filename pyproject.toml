@@ -58,7 +58,7 @@ prerelease = "if-necessary-or-explicit"
 
 
 [tool.uv.sources]
-pdi-nomad-plugin = { git = "https://github.com/PDI-Berlin/pdi-nomad-plugin.git", branch = "feature/pdi-lab-workspace" }
+pdi-nomad-plugin = { git = "https://github.com/Georg-Hoffmann/pdi-nomad-plugin.git", branch = "feature/pdi-lab-workspace" }
 epic_scraper = { git = "https://github.com/PDI-Berlin/EPIC_scraper.git", rev = "v1.0.0" }
 
 [tool.setuptools.packages.find]
