@@ -72,19 +72,7 @@ location ~ /api/v1/.*/download {
     proxy_pass http://nomad-app-backend;
 }
 
-# App metrics are for internal monitoring only (PDI network only).
-# Prometheus scrapes app:8000 directly and is not affected.
-location = /nomad-oasis/metrics {
-    allow 10.7.0.0/16;
-    deny all;
-    proxy_pass http://nomad-app-backend;
-}
-
 location /nomad-oasis/north/ {
-    # PDI network only
-    allow 10.7.0.0/16;
-    deny all;
-
     client_max_body_size 500m;
     proxy_pass http://north:9000;
 
@@ -106,10 +94,6 @@ location ~ ^/grafana$ {
 }
 
 location /grafana/ {
-    # PDI network only
-    allow 10.7.0.0/16;
-    deny all;
-
     set $grafana_backend "http://grafana:3000";
     proxy_pass $grafana_backend;
     proxy_set_header Host $host;
@@ -123,10 +107,6 @@ location ~ ^/temporal$ {
 }
 
 location /temporal/ {
-    # PDI network only
-    allow 10.7.0.0/16;
-    deny all;
-
     set $temporal_backend "http://temporal_ui:8080";
     proxy_pass $temporal_backend;
     proxy_set_header Host $host;
