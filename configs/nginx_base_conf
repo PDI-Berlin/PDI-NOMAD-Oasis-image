@@ -94,6 +94,7 @@ location ~ ^/grafana$ {
 }
 
 location /grafana/ {
+    deny all;       # not used on sun6
     set $grafana_backend "http://grafana:3000";
     proxy_pass $grafana_backend;
     proxy_set_header Host $host;
@@ -107,6 +108,7 @@ location ~ ^/temporal$ {
 }
 
 location /temporal/ {
+    deny all;   # not used on sun6
     set $temporal_backend "http://temporal_ui:8080";
     proxy_pass $temporal_backend;
     proxy_set_header Host $host;
