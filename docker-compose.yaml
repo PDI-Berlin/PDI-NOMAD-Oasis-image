@@ -2,11 +2,12 @@ services:
   # the search engine
   elastic:
     restart: unless-stopped
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.5.0
     container_name: nomad_oasis_elastic
     environment:
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
       - discovery.type=single-node
+      - xpack.security.enabled=false
     volumes:
       - elastic:/usr/share/elasticsearch/data
     healthcheck:
@@ -130,11 +131,12 @@ services:
   # nomad worker (processing)
   worker:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:main
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:pr-47
     platform: linux/amd64
     environment:
       NOMAD_SERVICE: nomad_oasis_worker
       NOMAD_ELASTIC_HOST: elastic
+      NOMAD_ELASTIC_VERSION: 9
       NOMAD_MONGO_HOST: mongo
       NOMAD_LOGSTASH_HOST: logtransfer
       NOMAD_TEMPORAL_HOST: temporal
@@ -261,7 +263,7 @@ services:
   # nomad app (api + proxy)
   app:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:main
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:pr-47
     platform: linux/amd64
     container_name: nomad_oasis_app
     environment:
@@ -269,6 +271,7 @@ services:
       NOMAD_SERVICES_API_PORT: 443
       NOMAD_FS_EXTERNAL_WORKING_DIRECTORY: "$PWD"
       NOMAD_ELASTIC_HOST: elastic
+      NOMAD_ELASTIC_VERSION: 9
       NOMAD_MONGO_HOST: mongo
       NOMAD_LOGSTASH_HOST: logtransfer
       NOMAD_NORTH_HUB_HOST: north
@@ -336,12 +339,13 @@ services:
   # to enable the logtransfer service run "docker compose --profile with_logtransfer up"
   logtransfer:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:main
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:pr-47
     platform: linux/amd64
     container_name: nomad_oasis_logtransfer_pdi
     environment:
       NOMAD_SERVICE: nomad_oasis_logtransfer
       NOMAD_ELASTIC_HOST: elastic
+      NOMAD_ELASTIC_VERSION: 9
       NOMAD_MONGO_HOST: mongo
     env_file:
       - ./.env
@@ -492,7 +496,7 @@ volumes:
   mongo:
     name: "nomad_oasis_mongo"
   elastic:
-    name: "nomad_oasis_elastic"
+    name: "nomad_oasis_elastic_9"
   keycloak:
     name: "nomad_oasis_keycloak"
   postgresql:
