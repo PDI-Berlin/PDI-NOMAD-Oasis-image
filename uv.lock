@@ -4566,7 +4566,7 @@ wheels = [
 [[package]]
 name = "pdi-nomad-plugin"
 version = "0.0.0"
-source = { git = "https://github.com/Georg-Hoffmann/pdi-nomad-plugin.git?branch=feature%2Fpdi-lab-workspace#483b0a6379314cdd8eebd4863aa3d54d9de57c31" }
+source = { git = "https://github.com/Georg-Hoffmann/pdi-nomad-plugin.git?branch=feature%2Fpdi-lab-workspace#b470a15423ddd16ba966f2e6d70961b1849ecea5" }
 dependencies = [
     { name = "epic-scraper" },
     { name = "nomad-lab" },
