@@ -5,7 +5,8 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:9.5.0
     container_name: nomad_oasis_elastic
     environment:
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      # Mitigate CVE until the bundled JDK is patched (FAIRmat template PR #328)
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m -XX:-UseBASE64Intrinsics
       - discovery.type=single-node
       - xpack.security.enabled=false
     volumes:
@@ -131,7 +132,7 @@ services:
   # nomad worker (processing)
   worker:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:pr-47
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v2.0.1.1
     platform: linux/amd64
     environment:
       NOMAD_SERVICE: nomad_oasis_worker
@@ -263,9 +264,12 @@ services:
   # nomad app (api + proxy)
   app:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:pr-47
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v2.0.1.1
     platform: linux/amd64
     container_name: nomad_oasis_app
+    networks:
+      - default
+      - north
     environment:
       NOMAD_SERVICE: nomad_oasis_app
       NOMAD_SERVICES_API_PORT: 443
@@ -308,10 +312,12 @@ services:
     image: ghcr.io/fairmat-nfdi/nomad-north:main
     platform: linux/amd64
     container_name: nomad_oasis_north_pdi
+    networks:
+      - north
     environment:
       NOMAD_API_URL: "http://app:8000/nomad-oasis/api/v1"
       DOCKER_PREFIX: "nomad-oasis-north"
-      DOCKER_NETWORK: "nomad_oasis_network"
+      DOCKER_NETWORK: "nomad_oasis_north_network_pdi"
     env_file:
       - ./.env.north
     volumes:
@@ -339,7 +345,7 @@ services:
   # to enable the logtransfer service run "docker compose --profile with_logtransfer up"
   logtransfer:
     restart: unless-stopped
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:pr-47
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image:v2.0.1.1
     platform: linux/amd64
     container_name: nomad_oasis_logtransfer_pdi
     environment:
@@ -363,8 +369,11 @@ services:
   # nomad proxy (a reverse proxy for nomad)
   proxy:
     restart: unless-stopped
-    image: docker.io/nginx:1.31.7-alpine
+    image: docker.io/nginx:1.31.9-alpine
     container_name: nomad_oasis_proxy
+    networks:
+      - default
+      - north
     command: nginx -g 'daemon off;'
     volumes:
       # Shared config
@@ -391,9 +400,11 @@ services:
 
   # jupyterlab image: (this is only used to pull the image, no service is run for this)
   jupyterlab_image:
-    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:v1.4.3.3
+    image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:v2.0.1.1
     platform: linux/amd64
     container_name: nomad_jupyter_image
+    networks:
+      - north
     pull_policy: always
     entrypoint: ["true"]
     deploy:
@@ -512,3 +523,6 @@ volumes:
 networks:
   default:
     name: nomad_oasis_network_pdi
+  north:
+    # NORTH + user notebooks only (FAIRmat template PR #328)
+    name: nomad_oasis_north_network_pdi
