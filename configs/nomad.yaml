@@ -15,7 +15,7 @@ plugins:
     options:
       nomad_north_jupyter.north_tools:jupyter:
         north_tool:
-          image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:main
+          image: ghcr.io/pdi-berlin/pdi-nomad-oasis-image/jupyter:v2.0.1.1
 
 meta:
   deployment: "oasis"
